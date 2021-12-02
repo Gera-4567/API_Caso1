@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DBCaso1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="t001_usuarios">
+          <Key>
+            <PropertyRef Name="id_usuario" />
+          </Key>
+          <Property Name="id_usuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nom_usuario" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="pass_usuario" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Ap1_usuario" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Ap2_usuario" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="email" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="t002_colonias">
+          <Key>
+            <PropertyRef Name="id_colonia" />
+          </Key>
+          <Property Name="id_colonia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nom_colonia" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="t003_depositos">
+          <Key>
+            <PropertyRef Name="id_deposito" />
+          </Key>
+          <Property Name="id_deposito" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nom_deposito" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="capacidad" Type="float" Nullable="false" />
+          <Property Name="uso" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="t004_presas">
+          <Key>
+            <PropertyRef Name="id_presa" />
+          </Key>
+          <Property Name="id_presa" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nom_presa" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="capacidad" Type="float" Nullable="false" />
+          <Property Name="uso" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="t005_tanques">
+          <Key>
+            <PropertyRef Name="id_tanque" />
+          </Key>
+          <Property Name="id_tanque" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nom_tanque" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="capacidad" Type="float" Nullable="false" />
+          <Property Name="uso" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="DBCaso1ModelStoreContainer">
+          <EntitySet Name="t001_usuarios" EntityType="Self.t001_usuarios" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="t002_colonias" EntityType="Self.t002_colonias" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="t003_depositos" EntityType="Self.t003_depositos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="t004_presas" EntityType="Self.t004_presas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="t005_tanques" EntityType="Self.t005_tanques" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DBCaso1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="t001_usuarios">
+          <Key>
+            <PropertyRef Name="id_usuario" />
+          </Key>
+          <Property Name="id_usuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nom_usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="pass_usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Ap1_usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Ap2_usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="t002_colonias">
+          <Key>
+            <PropertyRef Name="id_colonia" />
+          </Key>
+          <Property Name="id_colonia" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nom_colonia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="t003_depositos">
+          <Key>
+            <PropertyRef Name="id_deposito" />
+          </Key>
+          <Property Name="id_deposito" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nom_deposito" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="capacidad" Type="Double" Nullable="false" />
+          <Property Name="uso" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="t004_presas">
+          <Key>
+            <PropertyRef Name="id_presa" />
+          </Key>
+          <Property Name="id_presa" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nom_presa" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="capacidad" Type="Double" Nullable="false" />
+          <Property Name="uso" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="t005_tanques">
+          <Key>
+            <PropertyRef Name="id_tanque" />
+          </Key>
+          <Property Name="id_tanque" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nom_tanque" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="capacidad" Type="Double" Nullable="false" />
+          <Property Name="uso" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="DBCaso1Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="t001_usuarios" EntityType="Self.t001_usuarios" />
+          <EntitySet Name="t002_colonias" EntityType="Self.t002_colonias" />
+          <EntitySet Name="t003_depositos" EntityType="Self.t003_depositos" />
+          <EntitySet Name="t004_presas" EntityType="Self.t004_presas" />
+          <EntitySet Name="t005_tanques" EntityType="Self.t005_tanques" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DBCaso1ModelStoreContainer" CdmEntityContainer="DBCaso1Entities">
+          <EntitySetMapping Name="t001_usuarios">
+            <EntityTypeMapping TypeName="DBCaso1Model.t001_usuarios">
+              <MappingFragment StoreEntitySet="t001_usuarios">
+                <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+                <ScalarProperty Name="nom_usuario" ColumnName="nom_usuario" />
+                <ScalarProperty Name="pass_usuario" ColumnName="pass_usuario" />
+                <ScalarProperty Name="Ap1_usuario" ColumnName="Ap1_usuario" />
+                <ScalarProperty Name="Ap2_usuario" ColumnName="Ap2_usuario" />
+                <ScalarProperty Name="email" ColumnName="email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t002_colonias">
+            <EntityTypeMapping TypeName="DBCaso1Model.t002_colonias">
+              <MappingFragment StoreEntitySet="t002_colonias">
+                <ScalarProperty Name="id_colonia" ColumnName="id_colonia" />
+                <ScalarProperty Name="nom_colonia" ColumnName="nom_colonia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t003_depositos">
+            <EntityTypeMapping TypeName="DBCaso1Model.t003_depositos">
+              <MappingFragment StoreEntitySet="t003_depositos">
+                <ScalarProperty Name="id_deposito" ColumnName="id_deposito" />
+                <ScalarProperty Name="nom_deposito" ColumnName="nom_deposito" />
+                <ScalarProperty Name="capacidad" ColumnName="capacidad" />
+                <ScalarProperty Name="uso" ColumnName="uso" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t004_presas">
+            <EntityTypeMapping TypeName="DBCaso1Model.t004_presas">
+              <MappingFragment StoreEntitySet="t004_presas">
+                <ScalarProperty Name="id_presa" ColumnName="id_presa" />
+                <ScalarProperty Name="nom_presa" ColumnName="nom_presa" />
+                <ScalarProperty Name="capacidad" ColumnName="capacidad" />
+                <ScalarProperty Name="uso" ColumnName="uso" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t005_tanques">
+            <EntityTypeMapping TypeName="DBCaso1Model.t005_tanques">
+              <MappingFragment StoreEntitySet="t005_tanques">
+                <ScalarProperty Name="id_tanque" ColumnName="id_tanque" />
+                <ScalarProperty Name="nom_tanque" ColumnName="nom_tanque" />
+                <ScalarProperty Name="capacidad" ColumnName="capacidad" />
+                <ScalarProperty Name="uso" ColumnName="uso" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
